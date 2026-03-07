@@ -38,19 +38,14 @@ cargo install pest-language-server
 
 ### Set up language server
 
-Then set it up by calling this somewhere in your neovim lua config (you may need to pass any common `opts` to this as well):
-```lua
-require('pest-vim').setup {}
-```
+> **No LSP?** Follow [this setup tutorial](https://www.youtube.com/watch?v=IZnhl121yo0) to get one configured.
 
-If you're using `mason-lspconfig.nvim` with [Automatic server setup](https://github.com/williamboman/mason-lspconfig.nvim#automatic-server-setup-advanced-feature), you can configure it as:
+Create a new file `pest_ls.lua` on the lsp folder.
+Then paste this code:
 ```lua
-require('mason-lspconfig').setup_handlers {
-    ...
-
-    ['pest_ls'] = function ()
-        require('pest-vim').setup {}
-    end,
-    ...
+return {
+  cmd = { 'pest-language-server' },
+  filetypes = { 'pest' },
+  root_markers = {'Cargo.toml', '.git' },
 }
 ```
