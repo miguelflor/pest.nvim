@@ -6,30 +6,47 @@ files.
 Example (using the default color scheme):
 
 ![Screenshot](screenshot.png)
+## Neovim LSP support
 
 ## Installation
 
-### Using [Vundle](https://github.com/VundleVim/Vundle.vim)
+> Requires [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
-Add the following to your `vimrc`
-```vimrc
-Plugin 'pest-parser/pest.vim'
+### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
+```lua
+{
+  'pest-parser/pest.nvim',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+}
 ```
 
 ### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
-
 ```lua
-use 'pest-parser/pest.vim'
+use {
+  'pest-parser/pest.nvim',
+  requires = { 'nvim-treesitter/nvim-treesitter' },
+}
 ```
-After the installation is complete run the command:
 
+### Using [vim-plug](https://github.com/junegunn/vim-plug)
+Add the following to your `vimrc` or `init.vim`:
+```vim
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'pest-parser/pest.nvim'
+```
+
+### Using [dein.vim](https://github.com/Shougo/dein.vim)
+```vim
+call dein#add('nvim-treesitter/nvim-treesitter')
+call dein#add('pest-parser/pest.nvim')
+```
+
+After the installation is complete run the command:
 ```vim
 :TSInstall pest
 ```
 
 If `pest` is not detected restart neovim and rerun the command.
-
-## Neovim LSP support
 
 ### Install language server
 
