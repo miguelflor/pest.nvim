@@ -21,6 +21,13 @@ Plugin 'pest-parser/pest.vim'
 ```lua
 use 'pest-parser/pest.vim'
 ```
+After the installation is complete run the command:
+
+```vim
+:TSInstall pest
+```
+
+If `pest` is not detected restart neovim and rerun the command.
 
 ## Neovim LSP support
 
