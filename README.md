@@ -1,4 +1,4 @@
-# pest.vim
+# pest.nvim
 
 Syntax highlighting for [pest](https://github.com/pest-parser/pest) PEG grammar
 files.
