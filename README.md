@@ -1,4 +1,4 @@
-# pest.vim
+# pest.nvim
 
 Syntax highlighting for [pest](https://github.com/pest-parser/pest) PEG grammar
 files.
@@ -47,6 +47,14 @@ After the installation is complete run the command:
 ```
 
 If `pest` is not detected restart neovim and rerun the command.
+
+## Icon support
+
+`.pest` files can display a custom icon (nf-fa-sitemap) in file explorers
+and status lines. This is optional and requires a [Nerd Font](https://www.nerdfonts.com/)
+to be installed and set as your terminal font.
+
+Icon support is available for [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) and [mini.icons](https://github.com/echasnovski/mini.icons).
 
 ### Install language server
 

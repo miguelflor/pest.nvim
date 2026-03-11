@@ -10,3 +10,23 @@ configs.pest = {                               -- mutate it directly
   filetype = 'pest',
 }
 
+local ok, devicons = pcall(require, "nvim-web-devicons")
+if not ok then return end
+
+devicons.set_icon({
+  pest = {
+    icon = "",
+    color = "#F5A623",
+    cterm_color = "214",
+    name = "Pest",
+  },
+})
+
+local ok, mini_icons = pcall(require, "mini.icons")
+if not ok then return end
+
+mini_icons.setup({
+  extension = {
+    pest = { glyph = "", hl = "MiniIconsYellow" },
+  },
+})
