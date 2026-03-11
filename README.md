@@ -3,7 +3,7 @@
 Syntax highlighting for [pest](https://github.com/pest-parser/pest) PEG grammar
 files.
 
-Example (using the default color scheme):
+Example (using the rose-pine color scheme):
 
 ![Screenshot](screenshot.png)
 ## Neovim LSP support
