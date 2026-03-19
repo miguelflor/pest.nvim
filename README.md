@@ -17,6 +17,7 @@ Example (using the default color scheme):
 {
   'pest-parser/pest.nvim',
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  opts = {}
 }
 ```
 
@@ -25,6 +26,9 @@ Example (using the default color scheme):
 use {
   'pest-parser/pest.nvim',
   requires = { 'nvim-treesitter/nvim-treesitter' },
+  config = function()
+    require('pest-vim').setup()
+  end,
 }
 ```
 
@@ -34,11 +38,19 @@ Add the following to your `vimrc` or `init.vim`:
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'pest-parser/pest.nvim'
 ```
+Then in your Lua config:
+```lua
+require('pest-vim').setup()
+```
 
 ### Using [dein.vim](https://github.com/Shougo/dein.vim)
 ```vim
 call dein#add('nvim-treesitter/nvim-treesitter')
 call dein#add('pest-parser/pest.nvim')
+```
+Then in your Lua config:
+```lua
+require('pest-vim').setup()
 ```
 
 After the installation is complete run the command:
